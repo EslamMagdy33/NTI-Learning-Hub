@@ -1,0 +1,263 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Segoe UI", Arial, sans-serif;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #101c35, #172d4d, #123c55);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 24px;
+    color: #1e293b;
+}
+
+/*
+---------------- Login/Register Page ------------------------------
+*/
+.auth-container {
+    width: 100%;
+    max-width: 440px;
+}
+
+.auth-card {
+    background: #ffffff;
+    padding: 42px;
+    border-radius: 18px;
+    box-shadow: 0 25px 60px rgba(0, 0, 0, 0.25);
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 18px;
+    font-weight: 700;
+    color: #172d4d;
+    margin-bottom: 38px;
+}
+
+.brand-icon {
+    width: 42px;
+    height: 42px;
+    border-radius: 12px;
+    background: #176b87;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 22px;
+    font-weight: 700;
+}
+
+.auth-heading {
+    margin-bottom: 28px;
+}
+
+.auth-heading h1 {
+    font-size: 28px;
+    margin-bottom: 9px;
+    color: #172d4d;
+}
+
+.auth-heading p {
+    font-size: 14px;
+    color: #64748b;
+    line-height: 1.6;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 9px;
+    color: #334155;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 14px 15px;
+    border: 1px solid #dbe2ea;
+    border-radius: 9px;
+    outline: none;
+    font-size: 14px;
+    color: #1e293b;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.form-group input::placeholder {
+    color: #a0aaba;
+}
+
+.form-group input:focus {
+    border-color: #176b87;
+    box-shadow: 0 0 0 3px rgba(23, 107, 135, 0.12);
+}
+
+.submit-btn {
+    width: 100%;
+    padding: 14px;
+    margin-top: 8px;
+    border: none;
+    border-radius: 9px;
+    background: #176b87;
+    color: white;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s, transform 0.2s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.submit-btn:hover {
+    background: #12566e;
+    transform: translateY(-1px);
+}
+
+.alert {
+    padding: 12px 14px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    font-size: 13px;
+    line-height: 1.5;
+}
+
+.alert.success {
+    background: #ecfdf5;
+    color: #047857;
+    border: 1px solid #a7f3d0;
+}
+
+.alert.error {
+    background: #fef2f2;
+    color: #b91c1c;
+    border: 1px solid #fecaca;
+}
+
+.auth-footer {
+    margin-top: 26px;
+    text-align: center;
+    font-size: 13px;
+    color: #64748b;
+}
+
+.auth-footer a {
+    color: #176b87;
+    font-weight: 600;
+    text-decoration: none;
+    margin-left: 4px;
+}
+
+.auth-footer a:hover {
+    text-decoration: underline;
+}
+
+.copyright {
+    text-align: center;
+    color: #cbd5e1;
+    font-size: 12px;
+    margin-top: 24px;
+}
+
+@media (max-width: 480px) {
+    .auth-card {
+        padding: 30px 22px;
+    }
+
+    .auth-heading h1 {
+        font-size: 24px;
+    }
+}
+/*
+---------------- Welcome Page ------------------------------
+*/
+
+.welcome-profile {
+    text-align: center;
+    padding: 15px 0 25px;
+}
+
+.welcome-avatar {
+    width: 76px;
+    height: 76px;
+    margin: 0 auto 20px;
+    border-radius: 50%;
+    background: #e0f2f7;
+    color: #176b87;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+    font-weight: 700;
+}
+
+.welcome-profile h2 {
+    font-size: 21px;
+    color: #172d4d;
+    margin-bottom: 12px;
+}
+
+.welcome-profile p {
+    color: #64748b;
+    font-size: 14px;
+    line-height: 1.7;
+    max-width: 300px;
+    margin: 0 auto;
+}
+
+.user-email {
+    display: inline-block;
+    margin-top: 18px;
+    padding: 9px 15px;
+    background: #f1f5f9;
+    border-radius: 20px;
+    color: #475569;
+    font-size: 13px;
+}
+
+.welcome-actions {
+    margin-top: 10px;
+}
+
+.logout-btn {
+    text-decoration: none;
+}
+/*
+------------------------------------------ Student ----------------------
+*/
+
+.welcome-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 10px;
+}
+
+.welcome-actions .submit-btn {
+    text-decoration: none;
+}
+
+.welcome-actions .logout-btn {
+    background: #ffffff;
+    color: #64748b;
+    border: 1px solid #dbe2ea;
+}
+
+.welcome-actions .logout-btn:hover {
+    background: #f8fafc;
+    color: #172d4d;
+}
+
+
+

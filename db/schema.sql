@@ -13,5 +13,15 @@ CREATE TABLE IF NOT EXISTS users (
   password_hash VARCHAR(255) NOT NULL                   -- a hash, never the password itself
 );
 
+SELECT *
+FROM students
+
+CREATE TABLE  IF NOT EXISTS students(
+    id  INT AUTO_INCREMENT PRIMARY KEY,
+    full_name VARCHAR(100) NOT NULL,
+    email VARCHAR(150) NOT NULL UNIQUE,
+    track VARCHAR(150) NOT NULL
+);
+
 -- Check it:
 -- SELECT * FROM users;

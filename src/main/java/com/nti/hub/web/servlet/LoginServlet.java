@@ -3,6 +3,7 @@ package com.nti.hub.web.servlet;
 import com.nti.hub.config.Storage;
 import com.nti.hub.model.User;
 import com.nti.hub.util.PasswordHasher;
+import com.nti.hub.util.Trace;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
@@ -28,7 +29,7 @@ public class LoginServlet extends HttpServlet {
 
         String email = req.getParameter("email");
         String password = req.getParameter("password");
-
+        Trace.step("LoginServlet: UserDao.findByEmail + BCrypt check");
         User user = (email == null) ? null : Storage.getUserDao().findByEmail(email.trim().toLowerCase());
 
         if (user == null || password == null || !PasswordHasher.match(password,user.getPasswordHash())) {
@@ -38,7 +39,8 @@ public class LoginServlet extends HttpServlet {
         }
         HttpSession session= req.getSession();
         req.changeSessionId();
-       session.setAttribute("user", user);
+        session.setAttribute("user", user);
+        Trace.step("LoginServlet: login OK -> session created -> redirect /welcome");
         resp.sendRedirect(req.getContextPath() + "/welcome");
     }
 }
