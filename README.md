@@ -20,15 +20,15 @@ Java 17 · Jakarta EE 10 (Servlet 6, JSP, JSTL) · Apache Tomcat 10.1 · Maven �
 
 | Login | Register |
 |---|---|
-| ![Login](docs/screenshots/login.png) | ![Register](docs/screenshots/register.png) |
+| ![Login](docs/screenshots/Login.png) | ![Register](docs/screenshots/Register.png) |
 
 | Welcome | Students |
 |---|---|
-| ![Welcome](docs/screenshots/welcome.png) | ![Students](docs/screenshots/students.png) |
+| ![Welcome](docs/screenshots/Welcome.png) | ![Students](docs/screenshots/AllStudents.png) |
 
 ### The request lifecycle page
 
-![Lifecycle](docs/screenshots/lifecycle.png)
+![Lifecycle](docs/screenshots/RequestLifecycle.png)
 
 A request to `/students` without a session is stopped by `AuthFilter` and redirected to `/login` (HTTP 302):
 
@@ -36,7 +36,7 @@ A request to `/students` without a session is stopped by `AuthFilter` and redire
 
 Passwords are stored as BCrypt hashes:
 
-![Users table](docs/screenshots/users-table.png)
+![Users table](docs/screenshots/Database(1).png)
 
 ## HTTP request lifecycle
 
